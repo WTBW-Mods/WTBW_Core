@@ -62,14 +62,18 @@ dependencies {
 //    compile fg.deobf(curse.resolve('jei', project.jei_file))
 //    compile fg.deobf(curse.resolve("item-filters", project.item_filters_file))
 
-    if (findProject(':wtbw_lib') != null)
-    {
+    if (findProject(':Mod_WTBW_Lib') != null) {
+        compile project(':Mod_WTBW_Lib')
+    } 
+    else if (findProject(':wtbw_lib') != null){
         compile project(":wtbw_lib")
+    } 
+    else {
+        compile fg.deobf (project.dependencies.create("com.github.wtbw-mods:wtbw_lib:${wtbwlib_version}") {
+            transitive = false
+        })
     }
-    else
-    {
-        //todo: compileable standalone?
-    }
+
 }
 
 jar {
