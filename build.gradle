@@ -59,8 +59,6 @@ minecraft {
 
 dependencies {
     minecraft "net.minecraftforge:forge:${minecraft_version}-${forge_version}"
-//    compile fg.deobf(curse.resolve('jei', project.jei_file))
-//    compile fg.deobf(curse.resolve("item-filters", project.item_filters_file))
 
     if (findProject(':Mod_WTBW_Lib') != null) {
         compile project(':Mod_WTBW_Lib')
