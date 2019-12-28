@@ -39,5 +39,6 @@ public class WTBWCore
   {
     MinecraftForge.EVENT_BUS.addListener(ClientEventHandler::onTooltip);
     CoreClientConfig.init();
+    ClientRegistration.init();
   }
 }

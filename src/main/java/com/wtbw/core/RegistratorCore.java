@@ -1,7 +1,12 @@
 package com.wtbw.core;
 
+import com.wtbw.core.block.TrashCanBlock;
 import com.wtbw.core.block.WTBWCoreBlocks;
+import com.wtbw.core.gui.container.TrashCanContainer;
 import com.wtbw.core.item.EnderPouchItem;
+import com.wtbw.core.tile.trashcan.EnergyTrashCanTileEntity;
+import com.wtbw.core.tile.trashcan.FluidTrashCanTileEntity;
+import com.wtbw.core.tile.trashcan.TrashCanTileEntity;
 import com.wtbw.lib.Registrator;
 import com.wtbw.lib.item.BaseBlockItem;
 import com.wtbw.lib.item.BaseItem;
@@ -26,6 +31,10 @@ public class RegistratorCore extends Registrator
     register(new Block(getBlockProperties(Material.ROCK, 5, 6)), "charcoal_block", false);
     register(new Block(getBlockProperties(Material.ROCK, 5, 6)), "blaze_block", false);
     register(new Block(getBlockProperties(Material.ROCK, 10)), "groundium");
+    
+    register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new TrashCanTileEntity()), "trashcan");
+    register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new FluidTrashCanTileEntity()), "fluid_trashcan");
+    register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new EnergyTrashCanTileEntity()), "energy_trashcan");
   }
   
   @Override
@@ -43,9 +52,15 @@ public class RegistratorCore extends Registrator
   
   @Override
   protected void registerAllTiles()
-  { }
+  {
+    register(WTBWCoreBlocks.TRASHCAN);
+    register(WTBWCoreBlocks.ENERGY_TRASHCAN);
+    register(WTBWCoreBlocks.FLUID_TRASHCAN);
+  }
   
   @Override
   protected void registerAllContainers()
-  { }
+  {
+    registerContainer(TrashCanContainer::new, "trashcan");
+  }
 }
