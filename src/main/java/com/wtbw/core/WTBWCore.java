@@ -8,6 +8,8 @@ import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
+import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 /*
   @author: Naxanria
@@ -32,13 +34,19 @@ public class WTBWCore
   public WTBWCore()
   {
     registrator = new RegistratorCore(GROUP, MODID);
-    DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> clientSetup());
+    FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+    DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> clientStuff());
   }
   
-  private void clientSetup()
+  private void clientStuff()
   {
     MinecraftForge.EVENT_BUS.addListener(ClientEventHandler::onTooltip);
+
     CoreClientConfig.init();
+  }
+  
+  private void clientSetup(final FMLClientSetupEvent event)
+  {
     ClientRegistration.init();
   }
 }

@@ -1,6 +1,7 @@
 package com.wtbw.core;
 
 import com.wtbw.core.gui.container.ModContainers;
+import com.wtbw.lib.WTBWLib;
 import net.minecraft.client.gui.ScreenManager;
 import com.wtbw.core.gui.screen.TrashCanScreen;
 

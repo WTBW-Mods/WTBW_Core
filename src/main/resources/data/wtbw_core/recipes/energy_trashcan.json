@@ -1,0 +1,18 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "T",
+    "R"
+  ],
+  "key": {
+    "T": {
+      "item": "wtbw_core:trashcan"
+    },
+    "R": {
+      "item": "minecraft:redstone_block"
+    }
+  },
+  "result": {
+    "item": "wtbw_core:energy_trashcan"
+  }
+}

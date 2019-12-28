@@ -11,5 +11,9 @@
   "block.wtbw_core.groundium": "Groundium",
   "block.wtbw_core.blaze_block": "Block of Blaze",
 
+  "block.wtbw_core.trashcan": "Trashcan",
+  "block.wtbw_core.fluid_trashcan": "Fluid Trashcan",
+  "block.wtbw_core.energy_trashcan": "Energy Trashcan",
+
   "wtbw_core.tooltip.burntime": "Burns for %s ticks"
 }

@@ -1,0 +1,11 @@
+{
+  "parent": "wtbw_core:block/trashcan",
+  "credit": "Made with Blockbench",
+  "textures": {
+    "1": "wtbw_core:block/trashcan/fluid_trashcan_side",
+    "2": "wtbw_core:block/trashcan/fluid_trashcan_top",
+    "3": "wtbw_core:block/trashcan/fluid_trashcan_bottom",
+    "missing": "wtbw_core:block/trashcan/fluid_trashcan_top",
+    "particle": "wtbw_core:block/trashcan/fluid_trashcan_top"
+  }
+}
