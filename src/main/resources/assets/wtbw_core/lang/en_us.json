@@ -1,0 +1,15 @@
+{
+  "itemGroup.wtbw": "WTBW",
+
+  "item.wtbw_core.ender_pouch": "Ender Pouch",
+  "item.wtbw_core.tiny_charcoal": "Tiny Charcoal",
+  "item.wtbw_core.tiny_coal": "Tiny Coal",
+  "item.wtbw_core.ender_core": "Ender Core",
+
+
+  "block.wtbw_core.charcoal_block": "Block of Charcoal",
+  "block.wtbw_core.groundium": "Groundium",
+  "block.wtbw_core.blaze_block": "Block of Blaze",
+
+  "wtbw_core.tooltip.burntime": "Burns for %s ticks"
+}

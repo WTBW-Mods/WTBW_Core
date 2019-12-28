@@ -1,0 +1,39 @@
+modLoader="javafml" #mandatory
+loaderVersion="[30,)"
+
+#issueTrackerURL="http://my.issue.tracker/" #optional
+
+[[mods]]
+modId="wtbw_core"
+version="${file.jarVersion}"
+displayName="WTBW Core"
+#updateJSONURL="http://myurl.me/"
+#displayURL="http://example.com/"
+#logoFile="examplemod.png"
+#credits="Thanks for this example mod goes to Java" #optional
+authors="Naxanria, Sunekaer" #optional
+# The description text for the mod (multi line!) (#mandatory)
+description='''
+Core functionality and content for wtbw mods
+'''
+# A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
+[[dependencies.wtbw]] #optional
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[30.0.2,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+# Here's another dependency
+[[dependencies.wtbw]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.15.1,)"
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.wtbw]]
+    modId="wtbw_lib"
+    mandatory=true
+    versionRange="[1.0.0,)"
+    ordering="NONE"
+    side="BOTH"
