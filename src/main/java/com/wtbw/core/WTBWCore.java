@@ -1,6 +1,7 @@
 package com.wtbw.core;
 
 import com.wtbw.core.config.CoreClientConfig;
+import com.wtbw.core.item.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraft.item.Items;
@@ -27,7 +28,7 @@ public class WTBWCore
     @Override
     public ItemStack createIcon()
     {
-      return new ItemStack(Items.IRON_INGOT);
+      return new ItemStack(ModItems.ENDER_CORE);
     }
   };
   
