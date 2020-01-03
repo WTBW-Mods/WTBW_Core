@@ -1,8 +1,8 @@
-package com.wtbw.mods.tools.mods.core;
+package com.wtbw.mods.core;
 
-import com.wtbw.mods.tools.mods.core.gui.container.ModContainers;
+import com.wtbw.mods.core.gui.container.ModContainers;
 import net.minecraft.client.gui.ScreenManager;
-import com.wtbw.mods.tools.mods.core.gui.screen.TrashCanScreen;
+import com.wtbw.mods.core.gui.screen.TrashCanScreen;
 
 /*
   @author: Naxanria

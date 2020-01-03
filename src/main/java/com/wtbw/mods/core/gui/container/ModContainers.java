@@ -1,6 +1,6 @@
-package com.wtbw.mods.tools.mods.core.gui.container;
+package com.wtbw.mods.core.gui.container;
 
-import com.wtbw.mods.tools.mods.core.WTBWCore;
+import com.wtbw.mods.core.WTBWCore;
 import net.minecraft.inventory.container.ContainerType;
 import net.minecraftforge.registries.ObjectHolder;
 

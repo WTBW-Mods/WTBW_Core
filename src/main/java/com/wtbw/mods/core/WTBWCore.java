@@ -1,7 +1,7 @@
-package com.wtbw.mods.tools.mods.core;
+package com.wtbw.mods.core;
 
-import com.wtbw.mods.tools.mods.core.config.CoreClientConfig;
-import com.wtbw.mods.tools.mods.core.item.ModItems;
+import com.wtbw.mods.core.config.CoreClientConfig;
+import com.wtbw.mods.core.item.ModItems;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;

@@ -1,6 +1,6 @@
-package com.wtbw.mods.tools.mods.core.config;
+package com.wtbw.mods.core.config;
 
-import com.wtbw.mods.tools.mods.core.WTBWCore;
+import com.wtbw.mods.core.WTBWCore;
 import com.wtbw.mods.lib.config.BaseConfig;
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;

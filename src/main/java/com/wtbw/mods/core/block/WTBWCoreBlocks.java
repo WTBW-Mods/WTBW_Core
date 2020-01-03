@@ -1,10 +1,10 @@
-package com.wtbw.mods.tools.mods.core.block;
+package com.wtbw.mods.core.block;
 
-import com.wtbw.mods.tools.mods.core.WTBWCore;
+import com.wtbw.mods.core.WTBWCore;
 
-import com.wtbw.mods.tools.mods.core.tile.trashcan.EnergyTrashCanTileEntity;
-import com.wtbw.mods.tools.mods.core.tile.trashcan.FluidTrashCanTileEntity;
-import com.wtbw.mods.tools.mods.core.tile.trashcan.TrashCanTileEntity;
+import com.wtbw.mods.core.tile.trashcan.EnergyTrashCanTileEntity;
+import com.wtbw.mods.core.tile.trashcan.FluidTrashCanTileEntity;
+import com.wtbw.mods.core.tile.trashcan.TrashCanTileEntity;
 import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraftforge.registries.ObjectHolder;

@@ -1,7 +1,7 @@
-package com.wtbw.mods.tools.mods.core.tile.trashcan;
+package com.wtbw.mods.core.tile.trashcan;
 
-import com.wtbw.mods.tools.mods.core.gui.container.TrashCanContainer;
-import com.wtbw.mods.tools.mods.core.tile.ModTiles;
+import com.wtbw.mods.core.gui.container.TrashCanContainer;
+import com.wtbw.mods.core.tile.ModTiles;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.inventory.container.Container;

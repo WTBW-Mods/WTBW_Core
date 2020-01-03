@@ -1,6 +1,6 @@
-package com.wtbw.mods.tools.mods.core.tile.trashcan;
+package com.wtbw.mods.core.tile.trashcan;
 
-import com.wtbw.mods.tools.mods.core.tile.ModTiles;
+import com.wtbw.mods.core.tile.ModTiles;
 import net.minecraft.tileentity.TileEntity;
 import net.minecraft.util.Direction;
 import net.minecraftforge.common.capabilities.Capability;

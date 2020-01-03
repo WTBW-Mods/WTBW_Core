@@ -1,4 +1,4 @@
-package com.wtbw.mods.tools.mods.core.block;
+package com.wtbw.mods.core.block;
 
 import com.wtbw.mods.lib.block.BaseTileBlock;
 
