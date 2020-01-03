@@ -16,7 +16,7 @@ apply plugin: 'maven-publish'
 //apply plugin: 'com.wynprice.cursemaven'
 
 version = "${project_version}"
-group = 'com.wtbw.core'
+group = 'com.wtbw.mods.tools.mods.core'
 archivesBaseName = "wtbw_core-${minecraft_version}"
 
 sourceCompatibility = targetCompatibility = compileJava.sourceCompatibility = compileJava.targetCompatibility = '1.8'

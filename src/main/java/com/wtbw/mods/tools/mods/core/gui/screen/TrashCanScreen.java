@@ -1,9 +1,9 @@
-package com.wtbw.core.gui.screen;
+package com.wtbw.mods.tools.mods.core.gui.screen;
 
-import com.wtbw.core.WTBWCore;
-import com.wtbw.core.gui.container.TrashCanContainer;
-import com.wtbw.lib.gui.screen.BaseContainerScreen;
-import com.wtbw.lib.gui.util.GuiUtil;
+import com.wtbw.mods.tools.mods.core.WTBWCore;
+import com.wtbw.mods.tools.mods.core.gui.container.TrashCanContainer;
+import com.wtbw.mods.lib.gui.screen.BaseContainerScreen;
+import com.wtbw.mods.lib.gui.util.GuiUtil;
 import net.minecraft.entity.player.PlayerInventory;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.ITextComponent;

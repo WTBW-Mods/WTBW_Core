@@ -1,4 +1,4 @@
-package com.wtbw.core.item;
+package com.wtbw.mods.tools.mods.core.item;
 
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.inventory.EnderChestInventory;

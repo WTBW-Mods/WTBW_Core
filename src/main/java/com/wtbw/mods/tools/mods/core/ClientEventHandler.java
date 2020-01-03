@@ -1,8 +1,8 @@
-package com.wtbw.core;
+package com.wtbw.mods.tools.mods.core;
 
-//import com.wtbw.core.config.CoreClientConfig;
-import com.wtbw.core.config.CoreClientConfig;
-import com.wtbw.lib.util.Utilities;
+//import com.wtbw.mods.tools.mods.core.config.CoreClientConfig;
+import com.wtbw.mods.tools.mods.core.config.CoreClientConfig;
+import com.wtbw.mods.lib.util.Utilities;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;

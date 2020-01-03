@@ -1,15 +1,15 @@
-package com.wtbw.core;
+package com.wtbw.mods.tools.mods.core;
 
-import com.wtbw.core.block.TrashCanBlock;
-import com.wtbw.core.block.WTBWCoreBlocks;
-import com.wtbw.core.gui.container.TrashCanContainer;
-import com.wtbw.core.item.EnderPouchItem;
-import com.wtbw.core.tile.trashcan.EnergyTrashCanTileEntity;
-import com.wtbw.core.tile.trashcan.FluidTrashCanTileEntity;
-import com.wtbw.core.tile.trashcan.TrashCanTileEntity;
-import com.wtbw.lib.Registrator;
-import com.wtbw.lib.item.BaseBlockItem;
-import com.wtbw.lib.item.BaseItem;
+import com.wtbw.mods.tools.mods.core.block.TrashCanBlock;
+import com.wtbw.mods.tools.mods.core.block.WTBWCoreBlocks;
+import com.wtbw.mods.tools.mods.core.gui.container.TrashCanContainer;
+import com.wtbw.mods.tools.mods.core.item.EnderPouchItem;
+import com.wtbw.mods.tools.mods.core.tile.trashcan.EnergyTrashCanTileEntity;
+import com.wtbw.mods.tools.mods.core.tile.trashcan.FluidTrashCanTileEntity;
+import com.wtbw.mods.tools.mods.core.tile.trashcan.TrashCanTileEntity;
+import com.wtbw.mods.lib.Registrator;
+import com.wtbw.mods.lib.item.BaseBlockItem;
+import com.wtbw.mods.lib.item.BaseItem;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;

@@ -1,6 +1,6 @@
-package com.wtbw.core.block;
+package com.wtbw.mods.tools.mods.core.block;
 
-import com.wtbw.lib.block.BaseTileBlock;
+import com.wtbw.mods.lib.block.BaseTileBlock;
 
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
