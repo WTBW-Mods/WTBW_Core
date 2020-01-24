@@ -18,16 +18,16 @@ Core functionality and content for wtbw mods
 '''
 # A dependency - use the . to indicate dependency for a specific modid. Dependencies are optional.
 [[dependencies.wtbw_core]] #optional
-    modId="forge" #mandatory
-    mandatory=true #mandatory
-    versionRange="[30.0.30,)" #mandatory
+    modId="forge"
+    mandatory=true
+    versionRange="[31.0.0,)"
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
 [[dependencies.wtbw_core]]
     modId="minecraft"
     mandatory=true
-    versionRange="[1.15.1,)"
+    versionRange="[1.15.2,)"
     ordering="NONE"
     side="BOTH"
 
