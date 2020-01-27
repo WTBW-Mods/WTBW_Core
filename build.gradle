@@ -131,7 +131,7 @@ if (ENV.WTBW_CF_KEY) {
             releaseType = "beta"
             addGameVersion "1.15.2"
             relations {
-                requiredDependency 'wtbw_core'
+                requiredDependency 'wtbw_lib'
             }
             changelog = getGitChangelog
             changelogType = 'markdown'
