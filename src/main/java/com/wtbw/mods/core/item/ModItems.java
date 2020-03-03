@@ -12,4 +12,7 @@ import net.minecraftforge.registries.ObjectHolder;
 public class ModItems
 {
     public static final Item ENDER_CORE = Items.AIR;
+    
+    public static final Item COPPER_INGOT = Items.AIR;
+    public static final Item COBALT_INGOT = Items.AIR;
 }
