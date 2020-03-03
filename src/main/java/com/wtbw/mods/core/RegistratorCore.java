@@ -14,6 +14,8 @@ import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
+import net.minecraft.item.ItemTier;
+import net.minecraftforge.common.ToolType;
 
 /*
   @author: Naxanria
@@ -32,8 +34,11 @@ public class RegistratorCore extends Registrator
     register(new Block(getBlockProperties(Material.ROCK, 5, 6)), "blaze_block", false);
     register(new Block(getBlockProperties(Material.ROCK, 10)), "groundium");
     
-    register(new Block(getBlockProperties(Material.ROCK, 1.5f, 6)), "copper_ore");
-    register(new Block(getBlockProperties(Material.ROCK, 25f, 25)), "cobalt_ore");
+    register(new Block(getBlockProperties(Material.ROCK, 1.5f, 6).harvestTool(ToolType.PICKAXE)), "copper_ore");
+    register(new Block(getBlockProperties(Material.ROCK, 25f, 25).harvestTool(ToolType.PICKAXE).harvestLevel(ItemTier.DIAMOND.getHarvestLevel())), "cobalt_ore");
+    
+    register(new Block(getBlockProperties(Material.ROCK, 2, 6).harvestTool(ToolType.PICKAXE).harvestLevel(ItemTier.IRON.getHarvestLevel())), "copper_block");
+    register(new Block(getBlockProperties(Material.ROCK, 2, 6).harvestTool(ToolType.PICKAXE).harvestLevel(ItemTier.DIAMOND.getHarvestLevel())), "cobalt_block");
     
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new TrashCanTileEntity()), "trashcan");
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new FluidTrashCanTileEntity()), "fluid_trashcan");

@@ -1,0 +1,9 @@
+{
+  "type": "minecraft:blasting",
+  "ingredient": {
+    "item": "wtbw_core:cobalt_ore"
+  },
+  "result": "wtbw_core:cobalt_ingot",
+  "experience": 0.8,
+  "cookingtime": 100
+}

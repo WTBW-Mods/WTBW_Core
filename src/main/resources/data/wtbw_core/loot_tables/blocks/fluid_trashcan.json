@@ -1,5 +1,5 @@
 {
-  "type": "wtbt_core:fluid_trashcan",
+  "type": "wtbw_core:fluid_trashcan",
   "pools": [
     {
       "rolls": 1,

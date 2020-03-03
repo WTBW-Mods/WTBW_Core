@@ -1,12 +1,12 @@
 {
-  "type": "wtbw_core:trashcan",
+  "type": "wtbt_core:copper_ore",
   "pools": [
     {
       "rolls": 1,
       "entries": [
         {
           "type": "minecraft:item",
-          "name": "wtbw_core:trashcan"
+          "name": "wtbw_core:copper_ore"
         }
       ],
       "conditions": [
