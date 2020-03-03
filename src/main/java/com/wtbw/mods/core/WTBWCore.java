@@ -2,6 +2,7 @@ package com.wtbw.mods.core;
 
 import com.wtbw.mods.core.config.CoreClientConfig;
 import com.wtbw.mods.core.item.ModItems;
+import com.wtbw.mods.core.world.gen.WorldGenHandler;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemStack;
 import net.minecraftforge.api.distmarker.Dist;
@@ -9,6 +10,7 @@ import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.fml.DistExecutor;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLClientSetupEvent;
+import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
 import net.minecraftforge.fml.javafmlmod.FMLJavaModLoadingContext;
 
 /*
@@ -35,7 +37,13 @@ public class WTBWCore
   {
     registrator = new RegistratorCore(GROUP, MODID);
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
+    FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
     DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> clientStuff());
+  }
+  
+  private void commonSetup(final FMLCommonSetupEvent event)
+  {
+    WorldGenHandler.setupWorldGen();
   }
   
   private void clientStuff()

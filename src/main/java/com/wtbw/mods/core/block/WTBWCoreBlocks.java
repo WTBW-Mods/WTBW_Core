@@ -19,6 +19,9 @@ public class WTBWCoreBlocks
   public static final Block BLAZE_BLOCK = Blocks.AIR;
   public static final Block GROUNDIUM = Blocks.AIR;
   
+  public static final Block COPPER_ORE = Blocks.AIR;
+  public static final Block COBALT_ORE = Blocks.AIR;
+  
   public static final TrashCanBlock<EnergyTrashCanTileEntity> ENERGY_TRASHCAN = null;
   public static final TrashCanBlock<FluidTrashCanTileEntity> FLUID_TRASHCAN = null;
   public static final TrashCanBlock<TrashCanTileEntity> TRASHCAN = null;

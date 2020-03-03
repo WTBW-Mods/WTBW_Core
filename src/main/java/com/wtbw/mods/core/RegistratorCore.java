@@ -32,6 +32,9 @@ public class RegistratorCore extends Registrator
     register(new Block(getBlockProperties(Material.ROCK, 5, 6)), "blaze_block", false);
     register(new Block(getBlockProperties(Material.ROCK, 10)), "groundium");
     
+    register(new Block(getBlockProperties(Material.ROCK, 1.5f, 6)), "copper_ore");
+    register(new Block(getBlockProperties(Material.ROCK, 25f, 25)), "cobalt_ore");
+    
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new TrashCanTileEntity()), "trashcan");
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new FluidTrashCanTileEntity()), "fluid_trashcan");
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new EnergyTrashCanTileEntity()), "energy_trashcan");
@@ -48,15 +51,19 @@ public class RegistratorCore extends Registrator
     register(new Item(getItemProperties().maxStackSize(8)), "ender_core");
     
     register(new EnderPouchItem(getItemProperties().maxStackSize(1)), "ender_pouch");
+    
+    register(new Item(getItemProperties()), "copper_ingot");
+    register(new Item(getItemProperties()), "cobalt_ingot");
+    
   }
   
-  @Override
-  protected void registerAllTiles()
-  {
-    register(WTBWCoreBlocks.TRASHCAN);
-    register(WTBWCoreBlocks.ENERGY_TRASHCAN);
-    register(WTBWCoreBlocks.FLUID_TRASHCAN);
-  }
+//  @Override
+//  protected void registerAllTiles()
+//  {
+//    register(WTBWCoreBlocks.TRASHCAN);
+//    register(WTBWCoreBlocks.ENERGY_TRASHCAN);
+//    register(WTBWCoreBlocks.FLUID_TRASHCAN);
+//  }
   
   @Override
   protected void registerAllContainers()
