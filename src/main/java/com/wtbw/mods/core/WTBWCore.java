@@ -1,6 +1,7 @@
 package com.wtbw.mods.core;
 
 import com.wtbw.mods.core.config.CoreClientConfig;
+import com.wtbw.mods.core.config.CoreCommonConfig;
 import com.wtbw.mods.core.item.ModItems;
 import com.wtbw.mods.core.world.gen.WorldGenHandler;
 import net.minecraft.item.ItemGroup;
@@ -39,6 +40,8 @@ public class WTBWCore
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
     DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> clientStuff());
+  
+    CoreCommonConfig.init();
   }
   
   private void commonSetup(final FMLCommonSetupEvent event)

@@ -1,6 +1,6 @@
 package com.wtbw.mods.core.world.gen;
 
-import com.wtbw.mods.core.WTBWCore;
+import com.wtbw.mods.core.config.CoreCommonConfig;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
@@ -16,25 +16,30 @@ import net.minecraftforge.registries.ForgeRegistries;
 public class WorldGenHandler
 {
   private static ConfiguredFeature<?, ?> copperFeature;
-  private static ConfiguredFeature<?, ?> cobaltFeatureLow;
-  private static ConfiguredFeature<?, ?> cobaltFeatureHigh;
+  private static ConfiguredFeature<?, ?> cobaltFeature;
+  
   
   public static void setupWorldGen()
   {
-    copperFeature = getOreFeature(OreConfig.COPPER, Feature.ORE);
-    cobaltFeatureLow = getOreFeature(OreConfig.COBALT_LOW, Feature.ORE);
-    cobaltFeatureHigh = getOreFeature(OreConfig.COBALT_HIGH, Feature.ORE);
+    copperFeature = getOreFeature(CoreCommonConfig.COPPER, Feature.ORE);
+    cobaltFeature = getOreFeature(CoreCommonConfig.COBALT, Feature.ORE);
+
   
     ForgeRegistries.BIOMES.forEach(biome ->
     {
-      if (isBiomeValid(biome, false))
+      if (CoreCommonConfig.COPPER.isOreEnabled())
       {
-        addFeature(biome, copperFeature);
+        if (isBiomeValid(biome, false))
+        {
+          addFeature(biome, copperFeature);
+        }
       }
-      if (isBiomeValid(biome, true))
+      if (CoreCommonConfig.COBALT.isOreEnabled())
       {
-        addFeature(biome, cobaltFeatureLow);
-        addFeature(biome, cobaltFeatureHigh);
+        if (isBiomeValid(biome, true))
+        {
+          addFeature(biome, cobaltFeature);
+        }
       }
     });
   
@@ -52,9 +57,9 @@ public class WorldGenHandler
     return biome.getCategory() != Biome.Category.THEEND && biome.getCategory() != Biome.Category.NETHER;
   }
   
-  private static ConfiguredFeature<?, ?> getOreFeature(OreConfig config, Feature<OreFeatureConfig> feature)
+  private static ConfiguredFeature<?, ?> getOreFeature(CoreCommonConfig.OreConfig config, Feature<OreFeatureConfig> feature)
   {
-    OreBlockProvider provider = config.provider;
+    OreBlockProvider provider = config.getProvider();
     
     if (config.isOreEnabled())
     {

@@ -35,30 +35,37 @@ public class CoreClientConfig extends BaseConfig
   public CoreClientConfig(ForgeConfigSpec.Builder builder)
   {
     super(WTBWCore.MODID, builder);
-    
-    push("qol").push("tooltip").comment("Quality of life options");
   
+    qol();
+  }
+  
+  private void qol()
+  {
+    push("qol").push("tooltip").comment("Quality of life options");
+    
     showFullDurabilityOfTools = builder
       .comment("Shows durability in the tooltip even if tools have full durability")
       .translation(key("qol.show_full_durability"))
       .define("show_full_durability", true);
-  
+    
     showTags = builder
       .comment("Show the tags of an item")
       .translation(key("qol.show_tags"))
       .define("show_tags", true);
-  
+    
     showTagsRequireShift = builder
       .comment("Require shift to show tags")
       .translation(key("qol.show_tags_shift"))
       .define("show_tags_shift", true);
-  
+    
     showBurnTime = builder
       .comment("Shows the burn time of the item, in ticks")
       .translation(key("qol.show_burn_time"))
       .define("burn_time", true);
-  
-    pop();
+    
+    pop().pop();
   }
-
+  
+  
+  
 }
