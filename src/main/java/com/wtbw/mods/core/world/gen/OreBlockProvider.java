@@ -5,15 +5,17 @@ import net.minecraft.block.Block;
 import net.minecraft.block.Blocks;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
 
+import java.util.function.Supplier;
+
 /*
   @author: Naxanria
 */
 public class OreBlockProvider
 {
-  Block block;
+  Supplier<Block> block;
   OreFeatureConfig.FillerBlockType fillerBlockType;
   
-  public OreBlockProvider(Block block, OreFeatureConfig.FillerBlockType fillerBlockType)
+  public OreBlockProvider(Supplier<Block> block, OreFeatureConfig.FillerBlockType fillerBlockType)
   {
     this.block = block;
     this.fillerBlockType = fillerBlockType;
@@ -21,7 +23,7 @@ public class OreBlockProvider
   
   public Block getBlock()
   {
-    return block;
+    return block.get();
   }
   
   public OreFeatureConfig.FillerBlockType getFillerBlockType()

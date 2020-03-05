@@ -1,5 +1,6 @@
 package com.wtbw.mods.core.world.gen;
 
+import com.wtbw.mods.core.WTBWCore;
 import com.wtbw.mods.core.config.CoreCommonConfig;
 import net.minecraft.world.biome.Biome;
 import net.minecraft.world.gen.GenerationStage;
@@ -42,8 +43,6 @@ public class WorldGenHandler
         }
       }
     });
-  
-    System.out.println("Setup ore gen");
   }
   
   
@@ -63,6 +62,7 @@ public class WorldGenHandler
     
     if (config.isOreEnabled())
     {
+      WTBWCore.LOGGER.info("Creating ore config {} max: {} bottom: {} top: {}", provider.getBlock().getRegistryName().toString(), config.getMaxHeight(), config.getBottomOffset(), config.getTopOffset());
       return feature.func_225566_b_(new OreFeatureConfig(provider.getFillerBlockType(), provider.getBlock().getDefaultState(), config.maxVeinSize()))
         .func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(
           new CountRangeConfig(config.getPerChunk(), config.getBottomOffset(), config.getTopOffset(), config.getMaxHeight())
