@@ -6,6 +6,12 @@
   "item.wtbw_core.tiny_coal": "Tiny Coal",
   "item.wtbw_core.ender_core": "Ender Core",
 
+  "item.wtbw_core.copper_ore": "Copper Ore",
+  "item.wtbw_core.cobalt_ore": "Cobalt Ore",
+  "item.wtbw_core.copper_ingot": "Copper ingot",
+  "item.wtbw_core.cobalt_ingot": "Cobalt ingot",
+  "item.wtbw_core.copper_block": "Block of Copper",
+  "item.wtbw_core.cobalt_block": "Block of Cobalt",
 
   "block.wtbw_core.charcoal_block": "Block of Charcoal",
   "block.wtbw_core.groundium": "Groundium",
