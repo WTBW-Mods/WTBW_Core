@@ -3,7 +3,7 @@
   "group": "wool",
   "ingredients": [
     {
-      "item": "minecraft:brown_dye"
+      "tag": "forge:dyes/brown"
     },
     {
       "tag": "minecraft:wool"

@@ -3,7 +3,7 @@
   "group": "wool",
   "ingredients": [
     {
-      "item": "minecraft:lime_dye"
+      "tag": "forge:dyes/lime"
     },
     {
       "tag": "minecraft:wool"
