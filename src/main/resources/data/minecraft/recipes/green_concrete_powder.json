@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DSS",
+    "SSG",
+    "GGG"
+  ],
+  "key": {
+    "D": {
+      "tag": "forge:dyes/green"
+    },
+    "S": {
+      "item": "minecraft:sand"
+    },
+    "G": {
+      "item": "minecraft:gravel"
+    }
+  },
+  "result": {
+    "item": "minecraft:green_concrete_powder"
+  }
+}

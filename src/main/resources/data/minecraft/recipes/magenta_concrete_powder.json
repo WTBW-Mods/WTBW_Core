@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DSS",
+    "SSG",
+    "GGG"
+  ],
+  "key": {
+    "D": {
+      "tag": "forge:dyes/magenta"
+    },
+    "S": {
+      "item": "minecraft:sand"
+    },
+    "G": {
+      "item": "minecraft:gravel"
+    }
+  },
+  "result": {
+    "item": "minecraft:magenta_concrete_powder"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "DSS",
+    "SSG",
+    "GGG"
+  ],
+  "key": {
+    "D": {
+      "tag": "forge:dyes/pink"
+    },
+    "S": {
+      "item": "minecraft:sand"
+    },
+    "G": {
+      "item": "minecraft:gravel"
+    }
+  },
+  "result": {
+    "item": "minecraft:pink_concrete_powder"
+  }
+}
