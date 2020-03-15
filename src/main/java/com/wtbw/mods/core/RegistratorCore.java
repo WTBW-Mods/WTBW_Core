@@ -4,6 +4,7 @@ import com.wtbw.mods.core.block.TrashCanBlock;
 import com.wtbw.mods.core.block.WTBWCoreBlocks;
 import com.wtbw.mods.core.gui.container.TrashCanContainer;
 import com.wtbw.mods.core.item.EnderPouchItem;
+import com.wtbw.mods.core.item.upgrades.SpeedUpgradeItem;
 import com.wtbw.mods.core.tile.trashcan.EnergyTrashCanTileEntity;
 import com.wtbw.mods.core.tile.trashcan.FluidTrashCanTileEntity;
 import com.wtbw.mods.core.tile.trashcan.TrashCanTileEntity;
@@ -59,6 +60,8 @@ public class RegistratorCore extends Registrator
     
     register(new Item(getItemProperties()), "copper_ingot");
     register(new Item(getItemProperties()), "cobalt_ingot");
+    
+    register(new SpeedUpgradeItem(getItemProperties()), "speed_upgrade_mk1");
     
   }
   
