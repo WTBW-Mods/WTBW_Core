@@ -63,8 +63,8 @@ public class WorldGenHandler
     if (config.isOreEnabled())
     {
       WTBWCore.LOGGER.info("Creating ore config {} max: {} bottom: {} top: {}", provider.getBlock().getRegistryName().toString(), config.getMaxHeight(), config.getBottomOffset(), config.getTopOffset());
-      return feature.func_225566_b_(new OreFeatureConfig(provider.getFillerBlockType(), provider.getBlock().getDefaultState(), config.maxVeinSize()))
-        .func_227228_a_(Placement.COUNT_RANGE.func_227446_a_(
+      return feature.withConfiguration(new OreFeatureConfig(provider.getFillerBlockType(), provider.getBlock().getDefaultState(), config.maxVeinSize()))
+        .withPlacement(Placement.COUNT_RANGE.configure(
           new CountRangeConfig(config.getPerChunk(), config.getBottomOffset(), config.getTopOffset(), config.getMaxHeight())
         ));
     }

@@ -20,7 +20,7 @@ Core functionality and content for wtbw mods
 [[dependencies.wtbw_core]] #optional
     modId="forge"
     mandatory=true
-    versionRange="[31.0.0,)"
+    versionRange="[31.1.25,)"
     ordering="NONE"
     side="BOTH"
 # Here's another dependency
@@ -34,6 +34,6 @@ Core functionality and content for wtbw mods
 [[dependencies.wtbw_core]]
     modId="wtbw_lib"
     mandatory=true
-    versionRange="[1.0.13,)"
+    versionRange="[1.0.15,)"
     ordering="NONE"
     side="BOTH"
