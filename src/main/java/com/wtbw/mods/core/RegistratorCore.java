@@ -1,5 +1,6 @@
 package com.wtbw.mods.core;
 
+import com.wtbw.mods.core.block.HardenedBlock;
 import com.wtbw.mods.core.block.TrashCanBlock;
 import com.wtbw.mods.core.block.WTBWCoreBlocks;
 import com.wtbw.mods.core.gui.container.TrashCanContainer;
@@ -14,6 +15,7 @@ import com.wtbw.mods.lib.item.BaseItem;
 import com.wtbw.mods.lib.upgrade.ModifierType;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemTier;
@@ -48,6 +50,9 @@ public class RegistratorCore extends Registrator
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new TrashCanTileEntity()), "trashcan");
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new FluidTrashCanTileEntity()), "fluid_trashcan");
     register(new TrashCanBlock<>(getBlockProperties(Material.ROCK, 4), (world, state) -> new EnergyTrashCanTileEntity()), "energy_trashcan");
+    
+    register(new HardenedBlock(getBlockProperties(Material.IRON, 50, 50, MaterialColor.BLACK_TERRACOTTA)
+      .harvestTool(ToolType.PICKAXE).harvestLevel(ItemTier.DIAMOND.getHarvestLevel())), "reinforced_groundium");
   }
   
   @Override

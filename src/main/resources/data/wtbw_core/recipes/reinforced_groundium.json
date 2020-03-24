@@ -1,0 +1,23 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "GIG",
+    "IOI",
+    "GIG"
+  ],
+  "key": {
+    "G": {
+      "item": "wtbw_core:groundium"
+    },
+    "O": {
+      "item": "minecraft:obsidian"
+    },
+    "I": {
+      "item": "minecraft:iron_bars"
+    }
+  },
+  "result": {
+    "item": "wtbw_core:reinforced_groundium",
+    "count": 4
+  }
+}
