@@ -17,6 +17,7 @@
     }
   },
   "result": {
-    "item": "minecraft:blue_concrete_powder"
+    "item": "minecraft:blue_concrete_powder",
+    "count": 8
   }
 }

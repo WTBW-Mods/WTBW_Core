@@ -17,6 +17,7 @@
     }
   },
   "result": {
-    "item": "minecraft:lime_concrete_powder"
+    "item": "minecraft:lime_concrete_powder",
+    "count": 8
   }
 }

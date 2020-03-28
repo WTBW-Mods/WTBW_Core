@@ -17,6 +17,7 @@
     }
   },
   "result": {
-    "item": "minecraft:green_concrete_powder"
+    "item": "minecraft:green_concrete_powder",
+    "count": 8
   }
 }

@@ -17,6 +17,7 @@
     }
   },
   "result": {
-    "item": "minecraft:black_concrete_powder"
+    "item": "minecraft:black_concrete_powder",
+    "count": 8
   }
 }

@@ -17,6 +17,7 @@
     }
   },
   "result": {
-    "item": "minecraft:pink_concrete_powder"
+    "item": "minecraft:pink_concrete_powder",
+    "count": 8
   }
 }
