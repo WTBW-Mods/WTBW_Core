@@ -23,6 +23,8 @@
   "block.wtbw_core.fluid_trashcan": "Fluid Trashcan",
   "block.wtbw_core.energy_trashcan": "Energy Trashcan",
 
+  "block.wtbw_core.stone_torch": "Stone Torch",
+
   "wtbw_core.tooltip.burntime": "Burns for %s ticks",
   "wtbw_core.tooltip.wither_proof": "Wither Proof"
 }

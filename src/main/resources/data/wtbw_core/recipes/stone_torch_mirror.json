@@ -1,0 +1,19 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "cs",
+    "ss"
+  ],
+  "key": {
+    "s": {
+      "item": "minecraft:cobblestone"
+    },
+    "c": {
+      "tag": "minecraft:coals"
+    }
+  },
+  "result": {
+    "item": "wtbw_core:stone_torch",
+    "count": 4
+  }
+}

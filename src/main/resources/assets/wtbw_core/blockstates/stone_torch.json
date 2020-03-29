@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "wtbw_core:block/stone_torch", "y": 180 },
+    "facing=south": { "model": "wtbw_core:block/stone_torch" },
+    "facing=east": { "model": "wtbw_core:block/stone_torch", "y":  270},
+    "facing=west": { "model": "wtbw_core:block/stone_torch", "y": 90}
+  }
+}

@@ -1,6 +1,7 @@
 package com.wtbw.mods.core;
 
 import com.wtbw.mods.core.block.HardenedBlock;
+import com.wtbw.mods.core.block.StoneTorchBlock;
 import com.wtbw.mods.core.block.TrashCanBlock;
 import com.wtbw.mods.core.block.WTBWCoreBlocks;
 import com.wtbw.mods.core.gui.container.TrashCanContainer;
@@ -19,6 +20,7 @@ import net.minecraft.block.material.MaterialColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemGroup;
 import net.minecraft.item.ItemTier;
+import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.Util;
 import net.minecraftforge.common.ToolType;
 
@@ -53,6 +55,8 @@ public class RegistratorCore extends Registrator
     
     register(new HardenedBlock(getBlockProperties(Material.IRON, 50, 50, MaterialColor.BLACK_TERRACOTTA)
       .harvestTool(ToolType.PICKAXE).harvestLevel(ItemTier.DIAMOND.getHarvestLevel())), "reinforced_groundium");
+    
+    register(new StoneTorchBlock(getBlockProperties(Material.MISCELLANEOUS, 0).lightValue(14).notSolid().doesNotBlockMovement()), "stone_torch");
   }
   
   @Override
