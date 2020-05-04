@@ -5,6 +5,7 @@ import com.wtbw.mods.core.block.WTBWCoreBlocks;
 import com.wtbw.mods.core.world.gen.OreBlockProvider;
 import com.wtbw.mods.lib.config.BaseConfig;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
+
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.ModLoadingContext;
 import net.minecraftforge.fml.config.ModConfig;
@@ -40,7 +41,7 @@ public class CoreCommonConfig extends BaseConfig
     
     push("oreGen");
     COPPER = new OreConfig("copper", OreConfig.copper_provider, 12, 12, 24, 64);
-    COBALT = new OreConfig("cobalt", OreConfig.cobalt_provider, 3, 2, 80, 127);
+    COBALT = new OreConfig("cobalt", OreConfig.cobalt_provider, 5, 4, 80, 127);
     pop();
   }
   
