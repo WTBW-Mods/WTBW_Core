@@ -18,6 +18,8 @@ public class WTBWCoreBlocks
   public static final Block CHARCOAL_BLOCK = Blocks.AIR;
   public static final Block BLAZE_BLOCK = Blocks.AIR;
   public static final Block GROUNDIUM = Blocks.AIR;
+  public static final Block REINFORCED_GROUNDIUM = Blocks.AIR;
+  public static final Block STONE_TORCH = Blocks.AIR;
   
   public static final Block COPPER_ORE = Blocks.AIR;
   public static final Block COBALT_ORE = Blocks.AIR;
