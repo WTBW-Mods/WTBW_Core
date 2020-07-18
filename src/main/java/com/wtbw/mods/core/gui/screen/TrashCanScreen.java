@@ -1,5 +1,6 @@
 package com.wtbw.mods.core.gui.screen;
 
+import com.mojang.blaze3d.matrix.MatrixStack;
 import com.wtbw.mods.core.WTBWCore;
 import com.wtbw.mods.core.gui.container.TrashCanContainer;
 import com.wtbw.mods.lib.gui.screen.BaseContainerScreen;
@@ -21,7 +22,7 @@ public class TrashCanScreen extends BaseContainerScreen<TrashCanContainer>
   }
   
   @Override
-  protected void drawGuiContainerBackgroundLayer(float partialTicks, int mouseX, int mouseY)
+  protected void func_230450_a_(MatrixStack p_230450_1_, float p_230450_2_, int p_230450_3_, int p_230450_4_)
   {
     GuiUtil.renderTexture(guiLeft, guiTop, xSize, ySize, 0, 0, 256, 256, GUI);
   }

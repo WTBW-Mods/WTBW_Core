@@ -4,6 +4,8 @@ package com.wtbw.mods.core;
 import com.wtbw.mods.core.config.CoreClientConfig;
 import com.wtbw.mods.lib.util.Utilities;
 import net.minecraft.client.gui.screen.Screen;
+import net.minecraft.item.BlockItem;
+import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.*;
@@ -17,9 +19,6 @@ import java.util.Set;
 */
 public class ClientEventHandler
 {
-  private static Style white = new Style().setColor(TextFormatting.WHITE);
-  private static Style darkGrey = new Style().setColor(TextFormatting.DARK_GRAY);
-
   public static void onTooltip(final ItemTooltipEvent event)
   {
     CoreClientConfig config = CoreClientConfig.getConfig();
@@ -35,7 +34,9 @@ public class ClientEventHandler
         if (burnTime > 0)
         {
           int index = toolTip.size() - 1;
-          toolTip.add(index, new TranslationTextComponent("wtbw_core.tooltip.burntime", burnTime).setStyle(darkGrey));
+          TranslationTextComponent component = new TranslationTextComponent("wtbw_core.tooltip.burntime", burnTime);
+          component.func_230530_a_(component.getStyle().func_240712_a_(TextFormatting.WHITE));
+          toolTip.add(index, component);
         }
       }
 
@@ -51,12 +52,31 @@ public class ClientEventHandler
 
       if (config.showTags.get())
       {
-        if (!config.showTagsRequireShift.get() || Screen.hasShiftDown())
+        if (!config.showTagsRequireShift.get() || Screen.func_231173_s_())
         {
-          Set<ResourceLocation> tags = stack.getItem().getTags();
-          for (ResourceLocation location : tags)
+          Style style = Style.field_240709_b_.func_240712_a_(TextFormatting.DARK_GRAY);
+  
+          Item item = stack.getItem();
+          Set<ResourceLocation> itemTags = item.getTags();
+          if (itemTags.size() > 0)
           {
-            toolTip.add(new StringTextComponent("#" + location.toString()).setStyle(darkGrey));
+            toolTip.add(new StringTextComponent("ItemTags").func_230530_a_(style));
+            for (ResourceLocation location : itemTags)
+            {
+              toolTip.add(new StringTextComponent("#" + location.toString()).func_230530_a_(style));
+            }
+          }
+          if (item instanceof BlockItem)
+          {
+            Set<ResourceLocation> blockTags = ((BlockItem) item).getBlock().getTags();
+            if (blockTags.size() > 0)
+            {
+              toolTip.add(new StringTextComponent("BlockTags:").func_230530_a_(style));
+              for (ResourceLocation location : blockTags)
+              {
+                toolTip.add(new StringTextComponent("#" + location.toString()).func_230530_a_(style));
+              }
+            }
           }
         }
       }

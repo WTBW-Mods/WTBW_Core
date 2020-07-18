@@ -56,7 +56,7 @@ public class RegistratorCore extends Registrator
     register(new HardenedBlock(getBlockProperties(Material.IRON, 50, 50, MaterialColor.BLACK_TERRACOTTA)
       .harvestTool(ToolType.PICKAXE).harvestLevel(ItemTier.DIAMOND.getHarvestLevel())), "reinforced_groundium");
     
-    register(new StoneTorchBlock(getBlockProperties(Material.MISCELLANEOUS, 0).lightValue(14).notSolid().doesNotBlockMovement()), "stone_torch");
+    register(new StoneTorchBlock(getBlockProperties(Material.MISCELLANEOUS, 0).func_235838_a_(value -> 14).notSolid().doesNotBlockMovement()), "stone_torch");
   }
   
   @Override
