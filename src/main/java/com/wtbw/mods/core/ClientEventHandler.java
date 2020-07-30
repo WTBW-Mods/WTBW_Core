@@ -35,7 +35,7 @@ public class ClientEventHandler
         {
           int index = toolTip.size() - 1;
           TranslationTextComponent component = new TranslationTextComponent("wtbw_core.tooltip.burntime", burnTime);
-          component.func_230530_a_(component.getStyle().func_240712_a_(TextFormatting.WHITE));
+          component.setStyle(component.getStyle().setFormatting(TextFormatting.WHITE));
           toolTip.add(index, component);
         }
       }
@@ -52,18 +52,18 @@ public class ClientEventHandler
 
       if (config.showTags.get())
       {
-        if (!config.showTagsRequireShift.get() || Screen.func_231173_s_())
+        if (!config.showTagsRequireShift.get() || Screen.hasShiftDown())
         {
-          Style style = Style.field_240709_b_.func_240712_a_(TextFormatting.DARK_GRAY);
+          Style style = Style.EMPTY.setFormatting(TextFormatting.DARK_GRAY);
   
           Item item = stack.getItem();
           Set<ResourceLocation> itemTags = item.getTags();
           if (itemTags.size() > 0)
           {
-            toolTip.add(new StringTextComponent("ItemTags").func_230530_a_(style));
+            toolTip.add(new StringTextComponent("ItemTags").setStyle(style));
             for (ResourceLocation location : itemTags)
             {
-              toolTip.add(new StringTextComponent("#" + location.toString()).func_230530_a_(style));
+              toolTip.add(new StringTextComponent("#" + location.toString()).setStyle(style));
             }
           }
           if (item instanceof BlockItem)
@@ -71,10 +71,10 @@ public class ClientEventHandler
             Set<ResourceLocation> blockTags = ((BlockItem) item).getBlock().getTags();
             if (blockTags.size() > 0)
             {
-              toolTip.add(new StringTextComponent("BlockTags:").func_230530_a_(style));
+              toolTip.add(new StringTextComponent("BlockTags:").setStyle(style));
               for (ResourceLocation location : blockTags)
               {
-                toolTip.add(new StringTextComponent("#" + location.toString()).func_230530_a_(style));
+                toolTip.add(new StringTextComponent("#" + location.toString()).setStyle(style));
               }
             }
           }

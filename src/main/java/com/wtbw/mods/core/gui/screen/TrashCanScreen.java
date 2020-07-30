@@ -22,8 +22,8 @@ public class TrashCanScreen extends BaseContainerScreen<TrashCanContainer>
   }
   
   @Override
-  protected void func_230450_a_(MatrixStack p_230450_1_, float p_230450_2_, int p_230450_3_, int p_230450_4_)
+  protected void drawGuiContainerBackgroundLayer(MatrixStack stack, float p_230450_2_, int p_230450_3_, int p_230450_4_)
   {
-    GuiUtil.renderTexture(guiLeft, guiTop, xSize, ySize, 0, 0, 256, 256, GUI);
+    GuiUtil.renderTexture(stack, guiLeft, guiTop, xSize, ySize, 0, 0, 256, 256, GUI);
   }
 }
