@@ -41,14 +41,14 @@ public class CoreCommonConfig extends BaseConfig
     
     push("oreGen");
     COPPER = new OreConfig("copper", OreConfig.copper_provider, 12, 12, 24, 64);
-    COBALT = new OreConfig("cobalt", OreConfig.cobalt_provider, 5, 4, 80, 127);
+    COBALT = new OreConfig("cobalt", OreConfig.cobalt_provider, 8, 6, 12, 127);
     pop();
   }
   
   public static class OreConfig
   {
-    static final OreBlockProvider copper_provider = new OreBlockProvider(() -> WTBWCoreBlocks.COPPER_ORE, OreFeatureConfig.FillerBlockType.NATURAL_STONE);
-    static final OreBlockProvider cobalt_provider = new OreBlockProvider(() -> WTBWCoreBlocks.COBALT_ORE, OreFeatureConfig.FillerBlockType.NETHERRACK);
+    static final OreBlockProvider copper_provider = new OreBlockProvider(() -> WTBWCoreBlocks.COPPER_ORE, OreFeatureConfig.FillerBlockType.field_241882_a);
+    static final OreBlockProvider cobalt_provider = new OreBlockProvider(() -> WTBWCoreBlocks.COBALT_ORE, OreFeatureConfig.FillerBlockType.field_241883_b);
     
     private final OreBlockProvider provider;
     

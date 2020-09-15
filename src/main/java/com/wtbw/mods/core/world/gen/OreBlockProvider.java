@@ -1,9 +1,7 @@
 package com.wtbw.mods.core.world.gen;
 
-import com.wtbw.mods.core.block.WTBWCoreBlocks;
 import net.minecraft.block.Block;
-import net.minecraft.block.Blocks;
-import net.minecraft.world.gen.feature.OreFeatureConfig;
+import net.minecraft.world.gen.feature.template.RuleTest;
 
 import java.util.function.Supplier;
 
@@ -13,9 +11,9 @@ import java.util.function.Supplier;
 public class OreBlockProvider
 {
   Supplier<Block> block;
-  OreFeatureConfig.FillerBlockType fillerBlockType;
+  RuleTest fillerBlockType;
   
-  public OreBlockProvider(Supplier<Block> block, OreFeatureConfig.FillerBlockType fillerBlockType)
+  public OreBlockProvider(Supplier<Block> block, RuleTest fillerBlockType)
   {
     this.block = block;
     this.fillerBlockType = fillerBlockType;
@@ -26,7 +24,7 @@ public class OreBlockProvider
     return block.get();
   }
   
-  public OreFeatureConfig.FillerBlockType getFillerBlockType()
+  public RuleTest getFillerBlockType()
   {
     return fillerBlockType;
   }

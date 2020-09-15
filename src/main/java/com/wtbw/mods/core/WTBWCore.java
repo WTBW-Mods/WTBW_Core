@@ -42,6 +42,7 @@ public class WTBWCore
     registrator = new RegistratorCore(GROUP, MODID);
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::clientSetup);
     FMLJavaModLoadingContext.get().getModEventBus().addListener(this::commonSetup);
+    MinecraftForge.EVENT_BUS.addListener(WorldGenHandler::setupWorldGen);
     DistExecutor.runWhenOn(Dist.CLIENT, () -> () -> clientStuff());
   
     CoreCommonConfig.init();
@@ -49,7 +50,7 @@ public class WTBWCore
   
   private void commonSetup(final FMLCommonSetupEvent event)
   {
-    WorldGenHandler.setupWorldGen();
+//    WorldGenHandler.setupWorldGen();
   }
   
   private void clientStuff()

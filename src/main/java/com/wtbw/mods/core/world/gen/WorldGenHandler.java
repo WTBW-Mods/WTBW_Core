@@ -3,12 +3,14 @@ package com.wtbw.mods.core.world.gen;
 import com.wtbw.mods.core.WTBWCore;
 import com.wtbw.mods.core.config.CoreCommonConfig;
 import net.minecraft.world.biome.Biome;
+import net.minecraft.world.biome.DefaultBiomeFeatures;
 import net.minecraft.world.gen.GenerationStage;
 import net.minecraft.world.gen.feature.ConfiguredFeature;
 import net.minecraft.world.gen.feature.Feature;
 import net.minecraft.world.gen.feature.OreFeatureConfig;
-import net.minecraft.world.gen.placement.CountRangeConfig;
+
 import net.minecraft.world.gen.placement.Placement;
+import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.registries.ForgeRegistries;
 
 /*
@@ -19,64 +21,55 @@ public class WorldGenHandler
   private static ConfiguredFeature<?, ?> copperFeature;
   private static ConfiguredFeature<?, ?> cobaltFeature;
   
-  
-  public static void setupWorldGen()
+  public static void setupWorldGen(final BiomeLoadingEvent event)
   {
-    copperFeature = getOreFeature(CoreCommonConfig.COPPER, Feature.ORE);
-    cobaltFeature = getOreFeature(CoreCommonConfig.COBALT, Feature.ORE);
-
-  
-    ForgeRegistries.BIOMES.forEach(biome ->
+    if (copperFeature == null && CoreCommonConfig.COPPER.isOreEnabled())
     {
-      if (CoreCommonConfig.COPPER.isOreEnabled())
-      {
-        if (isBiomeValid(biome, false))
-        {
-          addFeature(biome, copperFeature);
-        }
-      }
-      if (CoreCommonConfig.COBALT.isOreEnabled())
-      {
-        if (isBiomeValid(biome, true))
-        {
-          addFeature(biome, cobaltFeature);
-        }
-      }
-    });
-  }
-  
-  
-  private static boolean isBiomeValid(Biome biome, boolean nether)
-  {
-    if (nether)
-    {
-      return biome.getCategory() == Biome.Category.NETHER;
+      copperFeature = getOreFeature(CoreCommonConfig.COPPER, Feature.ORE);
     }
     
-    return biome.getCategory() != Biome.Category.THEEND && biome.getCategory() != Biome.Category.NETHER;
+    if (cobaltFeature == null && CoreCommonConfig.COBALT.isOreEnabled())
+    {
+      cobaltFeature = getOreFeature(CoreCommonConfig.COBALT, Feature.ORE);
+    }
+    
+    if (isOverworld(event.getCategory()))
+    {
+      event.getGeneration().func_242513_a(GenerationStage.Decoration.UNDERGROUND_ORES, copperFeature);
+    }
+    else if (isNether(event.getCategory()))
+    {
+      event.getGeneration().func_242513_a(GenerationStage.Decoration.UNDERGROUND_ORES, cobaltFeature);
+    }
+  }
+  
+  public static boolean isOverworld(Biome.Category category)
+  {
+    return category != Biome.Category.NETHER && category != Biome.Category.THEEND;
+  }
+  
+  public static boolean isTheEnd(Biome.Category category)
+  {
+    return category == Biome.Category.THEEND;
+  }
+  
+  public static boolean isNether(Biome.Category category)
+  {
+    return category == Biome.Category.NETHER;
   }
   
   private static ConfiguredFeature<?, ?> getOreFeature(CoreCommonConfig.OreConfig config, Feature<OreFeatureConfig> feature)
   {
     OreBlockProvider provider = config.getProvider();
-    
+
     if (config.isOreEnabled())
     {
       WTBWCore.LOGGER.info("Creating ore config {} max: {} bottom: {} top: {}", provider.getBlock().getRegistryName().toString(), config.getMaxHeight(), config.getBottomOffset(), config.getTopOffset());
+      
       return feature.withConfiguration(new OreFeatureConfig(provider.getFillerBlockType(), provider.getBlock().getDefaultState(), config.maxVeinSize()))
-        .withPlacement(Placement.COUNT_RANGE.configure(
-          new CountRangeConfig(config.getPerChunk(), config.getBottomOffset(), config.getTopOffset(), config.getMaxHeight())
-        ));
+        .func_242733_d(config.getMaxHeight()).func_242728_a().func_242731_b(config.getPerChunk());
     }
-    
+
     return null;
-  }
-  
-  private static void addFeature(Biome biome, ConfiguredFeature<?, ?> feature)
-  {
-    if (feature != null)
-    {
-      biome.addFeature(GenerationStage.Decoration.UNDERGROUND_ORES, feature);
-    }
   }
 }
