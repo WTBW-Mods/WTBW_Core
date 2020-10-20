@@ -35,6 +35,6 @@ Core functionality and content for wtbw mods
 [[dependencies.wtbw_core]]
     modId="wtbw_lib"
     mandatory=true
-    versionRange="[1.0.15,)"
+    versionRange="[2.0,)"
     ordering="NONE"
     side="BOTH"
